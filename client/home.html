@@ -1,0 +1,19 @@
+<template name='home'>
+	<h1>Pinki.me</h1>
+	{{> loginButtons}}
+	<hr>
+	{{#autoForm collection='Pinkis' id='insertPinkiForm' type='insert'}}
+		<fieldset>
+			<legend>Create a PinkiPromiseSwear</legend>
+			{{> afQuickField name='description'}}
+		</fieldset>
+		<button type='submit' class='btn btn-primary'>Pinki up!</button>
+	{{/autoForm}}
+	<hr>
+	<h2>All the pinkis</h2>
+	<ul>
+	{{#each pinkis}}
+		<li>{{description}}, {{timeCreated}}, {{creatorUserId}}</li>
+	{{/each}}
+	</ul>
+</template>
