@@ -1,0 +1,2 @@
+Accounts.config
+  sendVerificationEmail: yes
